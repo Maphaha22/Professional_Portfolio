@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nditsheni Maphaha | Digital Solutions Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.6;overflow-x:hidden}
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem}
+
+    /* NAVIGATION – FIXED */
+    nav{position:fixed;top:0;width:100%;background:rgba(15,23,42,0.98);backdrop-filter:blur(12px);z-index:1000;padding:1.2rem 0;border-bottom:1px solid #334155}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto;padding:0 2rem}
+    .nav-logo{color:#fbbf24;font-size:1.9rem;font-weight:700}
+    .nav-menu{list-style:none;display:flex;gap:3rem}
+    .nav-link{color:#e2e8f0;text-decoration:none;font-weight:500;transition:.3s;padding:0.5rem 0}
+    .nav-link:hover,.nav-link.active{color:#fbbf24;border-bottom:2px solid #fbbf24}
+
+    /* HERO */
+    .hero{padding:11rem 2rem 7rem;text-align:center;background:linear-gradient(135deg,#1e293b,#0f172a)}
+    .profile-wrapper{display:inline-block;position:relative}
+    .profile-pic {
+    width: 260px; 
+    height: 260px; 
+    border-radius: 50%;
+    border: 6px solid #334155;
+    object-fit: cover;              /* makes the image fill the circle */
+    object-position: top center;    /* shifts your face up so it's centered */
+    display: block;                 /* removes inline gaps */
+    transition: all .5s;
+    box-shadow: 0 10px 30px rgba(0,0,0,.7);
+}
+
+/* Hover effect stays the same */
+.profile-pic:hover {
+    border-color: #fbbf24;
+    transform: scale(1.08);
+    box-shadow: 0 0 60px rgba(251,191,36,.8);
+}
+    .profile-pic:hover{border-color:#fbbf24;transform:scale(1.08);box-shadow:0 0 60px rgba(251,191,36,.8)}
+    h1{font-size:4.5rem;color:#fbbf24;margin:1rem 0 .5rem}
+    .title{font-size:2.2rem;color:#94a3b8}
+    .subtitle{font-size:1.3rem;color:#cbd5e1;margin:1.5rem 0}
+    .btn{display:inline-block;background:#f59e0b;color:#0f172a;padding:1rem 2.5rem;margin:1rem;border-radius:50px;text-decoration:none;font-weight:600;transition:.3s}
+    .btn:hover{background:#fcd34d;color:#0f172a;transform:scale(1.05)}
+
+    /* ABOUT – PHOTO LEFT, TEXT RIGHT */
+    #about{padding:7rem 0;background:#1e293b}
+    .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:center}
+    .about-photo{width:100%;max-width:480px;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+    .about-text h2{font-size:3rem;color:#fbbf24;margin-bottom:1.5rem}
+    .about-text p{margin-bottom:1.3rem;font-size:1.1rem}
+    .about-text ul{margin:2rem 0 0 2rem}
+    .about-text li{margin:.8rem 0;color:#cbd5e1}
+   
+
+    /* ACHIEVEMENTS, SKILLS, PROJECTS – same styling as before */
+    .section{padding:6rem 0}
+    .section h2{text-align:center;font-size:3rem;color:#fbbf24;margin-bottom:3rem}
+    .achievement-grid,.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:2.5rem}
+    .ach-card,.project-card{background:#1e293b;padding:2rem;border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.6);transition:.4s}
+    .ach-card:hover,.project-card:hover{transform:translateY(-12px);box-shadow:0 25px 60px rgba(251,191,36,.25)}
+    .project-card img{width:100%;height:240px;object-fit:cover;border-radius:12px}
+    .project-card h3{color:#fbbf24;padding-top:1rem}
+
+    /* SKILL BARS */
+    .skill-bar{display:flex;justify-content:space-between;align-items:center;margin:1.8rem 0;background:#334155;padding:1.2rem;border-radius:12px}
+    .bar{flex:1;height:16px;background:#475569;border-radius:8px;margin:0 1.5rem;overflow:hidden}
+    .fill{height:100%;background:#f59e0b;border-radius:8px;transition:width 2s ease}
+
+    /* FOOTER / CONTACT */
+    footer#contact{padding:6rem 2rem;text-align:center;background:#0f172a;border-top:2px solid #334155}
+    footer a{color:#f59e0b;margin:0 1.5rem;text-decoration:none;font-size:1.1rem}
+    footer a:hover{color:#fbbf24}
+
+    @media(max-width:968px){
+      .nav-menu{gap:1.5rem;font-size:.9rem}
+      .about-grid{grid-template-columns:1fr;text-align:center}
+      h1{font-size:3.5rem}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-logo"></div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="profile-wrapper">
+      <img src="images/Professional Photo3-modified.jpeg" alt="Nditsheni Maphaha" class="profile-pic">
+    </div>
+    <h1>Nditsheni Maphaha</h1>
+    <p class="title">Digital Solutions Engineer & Full-Stack Developer</p>
+    <p class="subtitle">WordPress • Cisco ISE • Azure • Bid Management • IT Technician • Available: Immediately</p></p>
+    <div>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="cv2.pdf" download class="btn">Download CV (PDF)</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="images/Maphaha_Photo.jpeg" alt="Nditsheni" class="about-photo">
+        </div>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Versatile digital solutions engineer combining web development, enterprise networking, cloud infrastructure, and technical sales. I build fast WordPress sites, deploy Cisco ISE for secure networks, write winning multi-million-rand bids, and close R500k+ deals.</p>
+          <p>Actively seeking opportunities to learn from industry experts, strengthen my skills, and contribute meaningfully to the growth of the organisation.</p>
+          <h3>Main Qualifications</h3>
+          <ul>
+            <li>National Diploma in Information Technology – Vaal University of Technology</li>
+            <li>Microsoft Certified: Azure Developer Associate (AZ-204) – valid 2026</li>
+            <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li> 
+            <li>Information Technology Specialist in Python - Certiport</li> 
+            <li>Cisco Certified Network Associate (CCNA) - Cisco Networking Academy</li> 
+            <li>Cisco Black Belt ISE Support Stage 3</li> 
+            <li>Multiple Cisco & IBM certifications (Cybersecurity, AI, Data Analysis)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY ACHIEVEMENTS -->
+  <section class="section achievements">
+    <div class="container">
+      <h2>Key Achievements</h2>
+      <div class="achievement-grid">
+        <div class="ach-card">
+          <h3>Cisco ISE Deployment</h3>
+          <p>Worked under senior CCIE to install & configure Cisco Identity Services Engine with secure guest WiFi using VLANs.</p>
+        </div>
+        <div class="ach-card">
+          <h3>R500k+ Public Sector Deal</h3>
+          <p>Closed R500k+ network deal + ongoing commission contract for ModenIT.</p>
+        </div>
+        <div class="ach-card">
+          <h3>Bid & Tender Management</h3>
+          <p>Led RFQ/RFP analysis, proposal writing, and Monday.com coordination for multi-million-rand tenders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <div class="container">
+      <h2>Technical Skills</h2>
+      <div class="skill-bar"><span>WordPress & WooCommerce</span><div class="bar"><div class="fill" style="width:95%"></div></div><span>95%</span></div>
+      <div class="skill-bar"><span>Elementor / Kadence / Divi</span><div class="bar"><div class="fill" style="width:90%"></div></div><span>90%</span></div>
+      <div class="skill-bar"><span>Cisco ISE & Networking</span><div class="bar"><div class="fill" style="width:50%"></div></div><span>50%</span></div>
+      <div class="skill-bar"><span>Microsoft Azure</span><div class="bar"><div class="fill" style="width:88%"></div></div><span>88%</span></div>
+      <div class="skill-bar"><span>Bid Management & RFx</span><div class="bar"><div class="fill" style="width:92%"></div></div><span>92%</span></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Live Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/Asya-ClayCo.jpeg" alt="Asya Clay Co">
+          <h3>Asya Clay Co – Live Store</h3>
+          <p>WooCommerce • Payment gateway • SEO</p>
+          <a href="https://asyaclayco.co.za" target="_blank">View Live →</a>
+        </div>
+        <div class="project-card">
+          <img src="images/Luna Salon 2.jpg" alt="Lush Hair">
+          <h3>Lush Hair & Beauty – Demo</h3>
+          <p>Agency-style salon • Booking form</p>
+          <a href="https://lushhair.rf.gd" target="_blank">View Demo →</a>
+        </div>
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800" alt="Construction">
+          <h3>Elevate Construction – Demo</h3>
+          <p>Corporate dark theme • Quote form</p>
+          <a href="https://elevategroup.rf.gd/?i=1#" target="_blank">View Demo →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FOOTER -->
+  <footer id="contact">
+    <p>© 2025 Nditsheni Maphaha – Digital Solutions Engineer - IT Professional</p>
+    <p>
+      <a href="maphahanditsheni10@gmail.com">maphahanditsheni10@gmail.com</a> • 
+      <a href="https://wa.me/27691944964">069 194 4964</a> • 
+      <a href="https://www.linkedin.com/in/nditsheni-m-a2b92b163/">LinkedIn</a>
+    </p>
+  </footer>
+</body>
+</html>
