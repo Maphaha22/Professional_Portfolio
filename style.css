@@ -62,3 +62,49 @@
   .about-image { order: 1; }
   .about-text { order: 2; }
 }
+
+/* TECHNICAL SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+  transition: 0.4s;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(251,191,36,0.25);
+}
+
+.skill-card h3 {
+  color: #fbbf24;
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.skill-tags span {
+  background: #334155;
+  padding: 0.5rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+
+.skill-tags span:hover {
+  background: #f59e0b;
+  color: #0f172a;
+}
